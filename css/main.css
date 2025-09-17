@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url(reset.css);
+@import url(../font/Reenie_Beanie/stylesheet.css);
+@import url(../font/Montserrat/stylesheet.css);
 
 #wrap {
     max-width: 1024px;
@@ -23,12 +25,12 @@ body {
 .agit .inner .text_wrap,
 .instagram,
 .footer .inner {
-    max-width: 1024px;
+    max-width: 100%;
     width: calc(100% - 48px);
     margin: 0 auto;
 }
 
-section h1 {
+ h1 {
     /* font-name: mon */
     font-size: 24px;
     font-weight: bold;
@@ -36,55 +38,70 @@ section h1 {
     letter-spacing: 0;
 }
 
-section .ALL {}
-section .ALL a {}
-section .ALL p {
+ .ALL {}
+
+ .ALL a {}
+
+ .ALL p {
     /* font-name: mo */
     font-size: 12px;
-    font-weight: 500; /* medium */
+    font-weight: 500;
+    /* medium */
     line-height: 18px;
     letter-spacing: 0;
     color: #747474;
 }
-section .ALL img {
+
+ .ALL img {
     width: 14px;
     height: 12px;
-    color: #747474; /* 아이콘컬러 변경 코드? */
+    color: #747474;
+    /* 아이콘컬러 변경 코드? */
 }
 
-section .text_wrap {
+ .text_wrap {
     /* 프리텐다드 */
 }
-section .text_wrap .title {
+
+ .text_wrap .title {
     font-size: 14px;
-    font-weight: 400; /* 레귤러? */
+    font-weight: 400;
+    /* 레귤러 */
     line-height: 22px;
     letter-spacing: -2.5%;
 }
-section .text_wrap .price-01 {
+
+ .text_wrap .price-01 {
     font-size: 12px;
-    font-weight: 300; /* 라이트? */
+    font-weight: 300;
+    /* 라이트 */
     line-height: 12px;
     letter-spacing: -2.5%;
     /* 취소선 */
     color: #747474
 }
-section .text_wrap .price-02 p {
+
+ .text_wrap .price-02 p {
     font-size: 14px;
-    font-weight: 600; /* 세미볼드? */
+    font-weight: 600;
+    /* 세미볼드 */
     line-height: 22px;
     letter-spacing: -2.5%;
     color: #FF0000;
 }
-section .text_wrap .price-02 p span {
+
+ .text_wrap .price-02 p span {
     font-size: 14px;
-    font-weight: 600; /* 세미볼드? */
+    font-weight: 600;
+    /* 세미볼드 */
     line-height: 22px;
     letter-spacing: -2.5%;
 }
-section .text_wrap .des {
+
+ .text_wrap .des {
     font-size: 12px;
-    font-weight: 400; /* 레귤러? */
+    font-weight: 400;
+    /* 레귤러 */
     line-height: 16px;
     letter-spacing: -2.5%;
     color: #747474;
@@ -92,66 +109,301 @@ section .text_wrap .des {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-
-
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .header {}
-.header .textline {}
-.header .inner {}
 
-.header .inner .logo {}
-.header .inner .logo a {}
-.header .inner .logo a img {}
+.header .textline {
+    width: 100%;
+    height: 36px;
+    background-color: #B40B8B;
+    color: #FFC850;
+    font-family: 'Reenie Beanie';
+    /* 공백없애면 폰트 적용안됨? */
+    white-space: nowrap; /* 글자 전체 다 보이게 강제한줄~ */
+    overflow: hidden;
+}
 
-.header .inner .util {}
-.header .inner .util li {}
-.header .inner .util li a {}
-.header .inner .util li a img {}
+.header .textline ul {
+    display: flex;
+    gap: 20px;
+}
 
-.header .nav {}
-.header .nav li {}
-.header .nav li a {}
+.header .textline ul li {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 36px;
+    letter-spacing: 0;
+}
+
+.header .inner {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .logo {
+    height: 24px;
+}
+
+.header .inner .logo a {
+    height: 100%;
+}
+
+.header .inner .logo a img {
+    height: 100%;
+}
+
+.header .inner .util {
+    display: flex;
+    gap: 16px;
+}
+
+.header .inner .util li {
+    height: 24px;
+}
+
+.header .inner .util li a {
+    height: 100%;
+}
+
+.header .inner .util li a img {
+    height: 100%;
+}
+
+.header .nav {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 16px;
+}
+
+.header .nav li {
+    /* 프리텐다드 */
+    font-size: 16px;
+    font-weight: 400;
+    /* 레귤러 */
+    line-height: 24px;
+    letter-spacing: -2.5%;
+    color: #747474;
+}
+
+.header .nav li.active {
+    /* html, script에 active추가? */
+    font-weight: 500;
+    /* 미듐 */
+    color: black;
+}
+
+.header .nav li a {
+    width: 100%;
+}
 
 /* main */
-.main_visual {}
-.main_visual .image {}
-.main_visual .image a {}
-.main_visual .image a img {}
+.main_visual {
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+}
 
+.main_visual .image {
+    width: 100%;
+}
 
-.main_visual .text {}
+.main_visual .image a {
+    width: 100%;
+}
+
+.main_visual .image a img {
+    width: 100%; /* img 크기값에 정확한 값을 주면 해상도가 바뀌어도 이미지 크기가 고정됨. */
+    height: 532px; /* 이미지 비율유지하고 싶으면 h값 계산! */
+    object-fit: cover;
+}
+
+.main_visual .text {
+    color: #fff;
+    position: absolute;
+    bottom: 60px;
+    left: 24px;
+    transform: translate(0, -50%);
+}
+
 .main_visual .text a {}
-.main_visual .text a strong {}
-.main_visual .text a p {}
 
-.main_visual .view {}
-.main_visual .view a {}
-.main_visual .view a p {}
-.main_visual .view a p img {}
+.main_visual .text a strong {
+    font-family: 'Montserrat';
+    /* 왜 폰트가 똑같은지 않은지? */
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -2.5%;
+    margin-bottom: 6px;
 
-.category {}
-.category .list {}
+}
+
+.main_visual .text a p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -2.5%;
+}
+
+.main_visual .view {
+    position: absolute;
+    bottom: 26px;
+    left: 24px;
+    transform: translate(0, -50%);
+    color: #fff;
+    /* 아이콘 컬러변경 코드? */
+
+}
+
+.main_visual .view a {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+
+}
+
+.main_visual .view a p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -2.5%;
+}
+
+.main_visual .view a p img {
+    width: 22px;
+    height: 22px;
+}
+
+.category {
+    margin-bottom: 32px;
+    margin-left: 24px;
+}
+
+.category .list {
+    display: flex;
+    gap: 8px;
+}
+
 .category .list .item {}
-.category .list .item .image {}
-.category .list .item .image a {}
-.category .list .item .image a .bg {}
-.category .list .item .image a .bg img {}
 
-.category .list .item .text {}
+.category .list .item .image {
+    width: 56px;
+    height: 56px;
+    background-color: rgb(116, 116, 116, 0.1);
+    border-radius: 50%;
+
+}
+
+.category .list .item .image a {
+    width: 100%;
+    display: block;
+}
+
+
+.category .list .item .image a img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+
+.category .list .item .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -2.5%;
+    white-space: nowrap;
+    
+
+}
+
 .category .list .item .text a p {}
 
-.swiper-wrapper {}
-.swiper-wrapper .swiper-slide {}
+.swiper-wrapper {
+    margin-bottom: 32px;
+   
+}
+.mySwiper {
+ background-color: #FFBFFB;
+}
+/* 스와이퍼가 아니라 애니메이션 효과? */
+
+.swiper-wrapper .swiper-slide {
+    
+    line-height: 42px;
+    border-radius: 6px;
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -2.5%;
+}
+
+ .best {}
+
+.best .inner {}
+
+ .best .inner .title {
+    display: flex;
+}
+
+ .best .inner .title h1 {}
+
+ .best .inner .title .all {}
+
+ .best .inner .title .all a {}
+
+ .best .inner .title .all a p {}
+
+ .best .inner .title .all a img {}
+
+ .best .inner .list {
+    width: 100%;
+    display: flex;
+}
+
+ .best .inner .list .item {
+    width: 47.70%;
+}
+
+ .best .inner .list .item .image {
+    width: 47.70%;
+}
+
+ .best .inner .list .item .image a {
+    width: 100%;
+}
+
+ .best .inner .list .item .image a img {
+    width: 156px;
+    height: 156px;
+    object-fit: cover;
+}
+
+
+ .best .inner .list .item .image .util {
+    display: flex;
+}
+
+ .best .inner .list .item .image .util li {}
+
+ .best .inner .list .item .image .util li img {}
+
+ .best .inner .list .item .text_wrap {}
+
+ .best .inner .list .item .text_wrap .title {}
+
+ .best .inner .list .item .text_wrap .price-01 {}
+
+ .best .inner .list .item .text_wrap .price-02 {}
+
+ .best .inner .list .item .text_wrap .price-02 p {}
+
+ .best .inner .list .item .text_wrap .price-02 span {}
+
+ .best .inner .list .item .text_wrap .des {}
