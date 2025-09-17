@@ -1,11 +1,473 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fwee_main</title>
+    <title>fwee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        };
+    </script>
+
 </head>
+
 <body>
-    
+    <div id="wrap">
+        <header class="header">
+            <div class="textline">
+                <ul>
+                    <li>Feel Your Moment, fwee</li>
+                    <li>Feel Your Moment, fwee</li>
+                </ul>
+            </div><!-- textline -->
+
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="img/logo.png" alt="로고"></a>
+                </h1><!-- logo -->
+
+                <ul class="util">
+                    <li><a href="#"><img src="img/icon/search.png" alt="검색"></a></li>
+                    <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                </ul><!-- util -->
+            </div><!-- inner -->
+
+            <ul class="nav">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">신상</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">뷰티로그</a></li>
+            </ul><!-- nav -->
+        </header><!-- header end -->
+
+        <main class="main">
+            <div class="main_visual">
+                <div class="image">
+                    <a href="#"><img src="img/model03.jpg" alt="메인비주얼"></a>
+                </div><!-- image -->
+
+                <div class="text">
+                    <a href="#">
+                        <strong>𝟑𝐃 𝐕OLUMING 𝐓INT</strong>
+                        <p>글로스의 광은 살리고<br>
+                            선명한 색감과 입술의 편안함을 더한.</p>
+                    </a>
+                </div><!-- text -->
+                <div class="view">
+                    <a href="#">
+                        <p>VIEW</p>
+                        <img src="img/icon/화살표.png" alt="">
+                    </a>
+                </div><!-- view -->
+            </div><!-- main_visual -->
+
+            <div class="category">
+                <div class="list">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#">
+                                <div class="bg"></div>
+                                <img src="img/icon/notice.png" alt="공식몰전용">
+                            </a>
+                        </div><!-- image -->
+                        <div class="text">
+                            <p>공식몰전용</p>
+                        </div><!-- text -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#">
+                                <div class="bg"></div>
+                                <img src="img/icon/gift.png" alt="웰컴혜택">
+                            </a>
+                        </div><!-- image -->
+                        <div class="text">
+                            <p>웰컴혜택</p>
+                        </div><!-- text -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#">
+                                <div class="bg"></div>
+                                <img src="img/icon/mail.png" alt="쿠폰존">
+                            </a>
+                        </div><!-- image -->
+                        <div class="text">
+                            <p>쿠폰존</p>
+                        </div><!-- text -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#">
+                                <div class="bg"></div>
+                                <img src="img/icon/chat.png" alt="리얼리뷰">
+                            </a>
+                        </div><!-- image -->
+                        <div class="text">
+                            <p>리얼리뷰</p>
+                        </div><!-- text -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#">
+                                <div class="bg"></div>
+                                <img src="img/icon/music.png" alt="카톡플친">
+                            </a>
+                        </div><!-- image -->
+                        <div class="text">
+                            <p>카톡플친</p>
+                        </div><!-- text -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#">
+                                <div class="bg"></div>
+                                <img src="img/icon/flower.png" alt="뷰티테스터">
+                            </a>
+                        </div><!-- image -->
+                        <div class="text">
+                            <p>뷰티테스터</p>
+                        </div><!-- text -->
+                    </div><!-- item -->
+                </div><!-- list -->
+            </div><!-- category -->
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">카톡 플친 추가하고 적립금 1,000원 받기 💌</div><!-- swiper-slide end -->
+                </div><!-- swiper-wrapper -->
+                <div class="swiper-slide">출첵하고 13,000원 받기 📅 </div><!-- swiper-slide end -->
+            </div><!-- swiper-wrapper -->
+            <div class="swiper-slide">welcome 혜택 받기 ✨</div><!-- swiper-slide end -->
+    </div><!-- swiper-wrapper -->
+    <div class="swiper-pagination"></div>
+    </div><!-- swiper mySwiper -->
+    <!-- Swiper JS -->
+
+    <section class="best">
+        <div class="inner">
+            <div class="title">
+                <h1>BEST</h1>
+                <div class="ALL">
+                    <a href="#">
+                        <p>ALL</p>
+                        <img src="img/icon/arrow-right.svg" alt="오른쪽화살표">
+                    </a>
+                </div><!-- ALL -->
+            </div><!-- title -->
+
+            <div class="list">
+                <div class="item">
+                    <div class="image">
+                        <a href="#"><img src="img/퓌 3D 볼류밍 틴트.jpg" alt="퓌 3D 볼류밍 틴트"></a>
+                        <ul class="util">
+                            <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                            <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                        </ul><!-- util -->
+                    </div><!-- image -->
+                    <div class="text_wrap">
+                        <div class="title">퓌 3D 볼류밍 틴트</div>
+                        <div class="price-01">18,000원</div>
+                        <div class="price-02">
+                            <p></p>
+                            <span>18,000원</span>
+                        </div><!-- price-02 -->
+                        <div class="des">
+                            <p>올영 단독 선런칭 전, NEW 틴트를 공식몰에서 가장 먼저 만나보세요!!!</p>
+                        </div><!-- des -->
+                    </div><!-- text_wrap -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <a href="#"><img src="img/퓌 쿠션 글래스 오리지널.jpg" alt="퓌 쿠션 글래스 오리지널"></a>
+                        <ul class="util">
+                            <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                            <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                        </ul><!-- util -->
+                    </div><!-- image -->
+
+                    <div class="text_wrap">
+                        <div class="title">퓌 쿠션 글래스 오리지널</div>
+                        <div class="price-01">28,000원</div>
+                        <div class="price-02">
+                            <p>25%</p>
+                            <span>21,000원</span>
+                        </div><!-- price-02 -->
+                        <div class="des">
+                            <p>[단종템 재출시] 제형은 그대로 케이스만 UPGRADE 되어 돌아온 원조 속광 쿠션!</p>
+                        </div><!-- des -->
+                    </div><!-- text_wrap -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <a href="#"><img src="img/퓌 3D 볼류밍 글로스.jpg" alt="퓌 3D 볼류밍 글로스"></a>
+                        <ul class="util">
+                            <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                            <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                        </ul><!-- util -->
+                    </div><!-- image -->
+
+                    <div class="text_wrap">
+                        <div class="title">퓌 3D 볼류밍 글로스</div>
+                        <div class="price-01">18,000원</div>
+                        <div class="price-02">
+                            <p>25%</p>
+                            <span>13,500원</span>
+                        </div><!-- price-02 -->
+                        <div class="des">
+                            <p>맥시로 차오르는 입체광으로 즉각적인 입술 튜닝, 매일 원하는 무드에 따라 농도 초이스가 가능한 3D 립글로스</p>
+                        </div><!-- des -->
+                    </div><!-- text_wrap -->
+                </div><!-- item -->
+                <div class="item">
+                    <div class="image">
+                        <a href="#"><img src="img/퓌 립앤치크 글로이 젤리팟.jpg" alt="퓌 립앤치크 글로이 젤리팟"></a>
+                        <ul class="util">
+                            <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                            <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                        </ul><!-- util -->
+                    </div><!-- image -->
+
+                    <div class="text_wrap">
+                        <div class="title">퓌 립앤치크 글로이 젤리팟</div>
+                        <div class="price-01">20,000원</div>
+                        <div class="price-02">
+                            <p>25%</p>
+                            <span>16,000원</span>
+                        </div><!-- price-02 -->
+                        <div class="des">
+                            <p>#말캉탱글 젤리 텍스처의 압도적 탱글함이 만들어내는 과즙 속광 립앤치크</p>
+                        </div><!-- des -->
+                    </div><!-- text_wrap -->
+                </div><!-- item -->
+            </div><!-- list -->
+        </div><!-- inner -->
+    </section><!-- best -->
+
+    <section class="best-02">
+        <div class="video">
+            <a href="#"><video src="img/볼류밍틴트.mp4"></video></a>
+        </div><!-- video -->
+
+        <div class="inner">
+            <div class="text">
+                <a href="#">
+                    <strong>𝟑𝐃 𝐕OLUMING 𝐓INT</strong>
+                    <p>글로스의 광은 살리고<br>
+                        선명한 색감과 입술의 편안함을 더한.</p>
+                </a>
+            </div><!-- text -->
+            <div class="product_wrap">
+                <div class="image">
+                    <a href="#"><img src="img/퓌 3D 볼류밍 틴트.jpg" alt="퓌 3D 볼류밍 틴트"></a>
+                </div><!-- image -->
+                <div class="text">
+                    <div class="title">퓌 3D 볼류밍 틴트</div>
+                    <div class="price">18,000원</div>
+                    <div class="des">✔️02 바닐라듀, 05 스트로베리팝 사용</div>
+                </div><!-- text -->
+            </div><!-- product_wrap -->
+        </div><!-- inner -->
+    </section><!-- best-02 -->
+
+    <section class="new">
+        <div class="inner">
+            <div class="title">
+                <h1>NEW</h1>
+                <div class="ALL">
+                    <a href="#">
+                        <p>ALL</p>
+                        <img src="img/icon/arrow-right.svg" alt="오른쪽화살표">
+                    </a>
+                </div><!-- ALL -->
+            </div><!-- title -->
+
+            <div class="list">
+                <div class="item">
+                    <div class="image">
+                        <a href="#"><img src="img/퓌 포켓 치크팔레트.jpg" alt="퓌 포켓 치크팔레트"></a>
+                        <ul class="util">
+                            <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                            <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                        </ul><!-- util -->
+                    </div><!-- image -->
+                    <div class="text_wrap">
+                        <div class="title">퓌 포켓 치크팔레트</div>
+                        <div class="price-01">26,000원</div>
+                        <div class="price-02">
+                            <p>20%</p>
+                            <span>20,800원</span>
+                        </div><!-- price-02 -->
+                    </div><!-- text_wrap -->
+                </div><!-- item -->
+
+                <div class="list">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#"><img src="img/퓌 포켓 아이팔레트.jpg" alt="퓌 포켓 아이팔레트"></a>
+                            <ul class="util">
+                                <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                                <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                            </ul><!-- util -->
+                        </div><!-- image -->
+                        <div class="text_wrap">
+                            <div class="title">퓌 포켓 아이팔레트</div>
+                            <div class="price-01">24,000원</div>
+                            <div class="price-02">
+                                <p>20%</p>
+                                <span>19,200원</span>
+                            </div><!-- price-02 -->
+                        </div><!-- text_wrap -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#"><img src="img/퓌 쿠션 글래스 오리지널.jpg" alt="퓌 쿠션 글래스 오리지널"></a>
+                            <ul class="util">
+                                <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                                <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                            </ul><!-- util -->
+                        </div><!-- image -->
+                        <div class="text_wrap">
+                            <div class="title">퓌 쿠션 글래스 오리지널</div>
+                            <div class="price-01">28,000원</div>
+                            <div class="price-02">
+                                <p>25%</p>
+                                <span>21,000원</span>
+                            </div><!-- price-02 -->
+                        </div><!-- text_wrap -->
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <div class="image">
+                            <a href="#"><img src="img/퓌 글리츠 스톤 하이라이터.jpg" alt="퓌 글리츠 스톤 하이라이터"></a>
+                            <ul class="util">
+                                <li><a href="#"><img src="img/icon/heart.png" alt="하트"></a></li>
+                                <li><a href="#"><img src="img/icon/bag.png" alt="장바구니"></a></li>
+                            </ul><!-- util -->
+                        </div><!-- image -->
+                        <div class="text_wrap">
+                            <div class="title">퓌 글리츠 스톤 하이라이터</div>
+                            <div class="price-01">22,000원</div>
+                            <div class="price-02">
+                                <p>25%</p>
+                                <span>16,500원</span>
+                            </div><!-- price-02 -->
+                        </div><!-- text_wrap -->
+                    </div><!-- item -->
+
+                </div><!-- list -->
+            </div><!-- inner -->
+    </section><!-- new -->
+
+    <section class="new-02">
+        <!-- controls: 컨트롤바/ autoplay: 자동재생
+         muted: 음소거/ loof: 반복 -->
+        <div class="inner"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/rLS3kmg7bVM?si=v5lgqFBS_dWcMQC2" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="text">
+            <a href="#">
+                <p>fwee_Official YOUTUBE</p>
+            </a>
+        </div><!-- text end -->
+    </section><!-- new-02 -->
+
+    <section class="agit">
+        <div class="inner">
+            <div class="title">
+                <h1>fwee AGIT</h1>
+                <p>설레는 모든 순간을 언제나 퓌 아지트와 함께 해보세요!</p>
+            </div><!-- title -->
+
+            <div class="list">
+                <div class="item">
+                    <div class="image">
+                        <img src="img/아지트_성수.jpg" alt="성수">
+                    </div><!-- image -->
+                    <div class="text_wrap">
+                        <div class="title">SEONGSU</div>
+                        <div class="address">
+                            <p>11:00 - 21:00 (연중무휴) <br>
+                                서울특별시 성동구 성수이로7가길 10 (성수동2가)</p>
+                        </div><!-- address -->
+                    </div><!-- text_wrap -->
+                </div><!-- item -->
+            </div><!-- list -->
+        </div><!-- inner -->
+    </section><!-- agit -->
+
+    <div class="textline-02">
+        <ul>
+            <li>Feel Your Moment, fwee</li>
+            <li>Feel Your Moment, fwee</li>
+        </ul>
+    </div><!-- textline-02 -->
+
+    <section class="instagram">
+        <div class="inner">
+            <div class="title">
+                <h1>INSTAGRAM</h1>
+                <p>@fwee_makeup</p>
+            </div><!-- title -->
+
+            <div class="image">
+                <a href=""><img src="img/insta1.png" alt=""></a>
+                <a href=""><img src="img/insta2.png" alt=""></a>
+                <a href=""><img src="img/insta3.png" alt=""></a>
+                <a href=""><img src="img/insta4.png" alt=""></a>
+                <a href=""><img src="img/insta5.png" alt=""></a>
+                <a href=""><img src="img/insta6.png" alt=""></a>
+            </div><!-- image -->
+
+        </div><!-- inner -->
+    </section><!-- instagram -->
+    </main><!-- main end -->
+
+    <div class="bottom_nav">
+        <!-- 하단고정바 -->
+    </div><!-- bottom_nav -->
+    <footer class="footer">
+        <div class="inner">
+
+        </div><!-- inner -->
+
+    </footer><!-- footer end -->
+
+    </div><!-- wrap -->
 </body>
+
 </html>

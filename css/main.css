@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url(reset.css);
+
+#wrap {
+    max-width: 1024px;
+}
+
+/* 공통스타일 정리 */
+body {
+    background-color: #fff;
+    color: black;
+}
+
+.header .inner,
+.header .nav,
+.main_visual .text,
+.swiper-wrapper,
+.best .inner,
+.best-02 .inner,
+.new .inner,
+.new-02 .inner,
+.agit .inner .title,
+.agit .inner .text_wrap,
+.instagram,
+.footer .inner {
+    max-width: 1024px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+section h1 {
+    /* font-name: mon */
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: 0;
+}
+
+section .ALL {}
+section .ALL a {}
+section .ALL p {
+    /* font-name: mo */
+    font-size: 12px;
+    font-weight: 500; /* medium */
+    line-height: 18px;
+    letter-spacing: 0;
+    color: #747474;
+}
+section .ALL img {
+    width: 14px;
+    height: 12px;
+    color: #747474; /* 아이콘컬러 변경 코드? */
+}
+
+section .text_wrap {
+    /* 프리텐다드 */
+}
+section .text_wrap .title {
+    font-size: 14px;
+    font-weight: 400; /* 레귤러? */
+    line-height: 22px;
+    letter-spacing: -2.5%;
+}
+section .text_wrap .price-01 {
+    font-size: 12px;
+    font-weight: 300; /* 라이트? */
+    line-height: 12px;
+    letter-spacing: -2.5%;
+    /* 취소선 */
+    color: #747474
+}
+section .text_wrap .price-02 p {
+    font-size: 14px;
+    font-weight: 600; /* 세미볼드? */
+    line-height: 22px;
+    letter-spacing: -2.5%;
+    color: #FF0000;
+}
+section .text_wrap .price-02 p span {
+    font-size: 14px;
+    font-weight: 600; /* 세미볼드? */
+    line-height: 22px;
+    letter-spacing: -2.5%;
+}
+section .text_wrap .des {
+    font-size: 12px;
+    font-weight: 400; /* 레귤러? */
+    line-height: 16px;
+    letter-spacing: -2.5%;
+    color: #747474;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {}
+.header .textline {}
+.header .inner {}
+
+.header .inner .logo {}
+.header .inner .logo a {}
+.header .inner .logo a img {}
+
+.header .inner .util {}
+.header .inner .util li {}
+.header .inner .util li a {}
+.header .inner .util li a img {}
+
+.header .nav {}
+.header .nav li {}
+.header .nav li a {}
+
+/* main */
+.main_visual {}
+.main_visual .image {}
+.main_visual .image a {}
+.main_visual .image a img {}
+
+
+.main_visual .text {}
+.main_visual .text a {}
+.main_visual .text a strong {}
+.main_visual .text a p {}
+
+.main_visual .view {}
+.main_visual .view a {}
+.main_visual .view a p {}
+.main_visual .view a p img {}
+
+.category {}
+.category .list {}
+.category .list .item {}
+.category .list .item .image {}
+.category .list .item .image a {}
+.category .list .item .image a .bg {}
+.category .list .item .image a .bg img {}
+
+.category .list .item .text {}
+.category .list .item .text a p {}
+
+.swiper-wrapper {}
+.swiper-wrapper .swiper-slide {}
