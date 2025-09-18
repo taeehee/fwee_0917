@@ -13,7 +13,6 @@ body {
     background-color: #fff;
     color: black;
     font-family: 'Pretendard';
-
 }
 
 .header .inner,
@@ -84,13 +83,11 @@ strong {
     width: 14px;
     height: 12px;
     color: #747474;
-    
+    filter: invert(50%) sepia(9%) saturate(17%) hue-rotate(344deg) brightness(88%) contrast(83%);
     /* 아이콘컬러 변경 코드? */
 }
 
 .inner .list {
-    background-color: #FFC850;
-    /* 테스트 */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -337,15 +334,12 @@ strong {
     left: 24px;
     transform: translate(0, -50%);
     color: #fff;
-    /* 아이콘 컬러변경 코드? */
-
 }
 
 .main_visual .view a {
     display: flex;
     gap: 2px;
     align-items: center;
-
 }
 
 .main_visual .view a p {
@@ -354,11 +348,6 @@ strong {
     font-weight: 500;
     line-height: 22px;
     letter-spacing: -2.5%;
-}
-
-.main_visual .view a p img {
-    width: 22px;
-    height: 22px;
 }
 
 .category {
@@ -517,7 +506,6 @@ strong {
 .best-02 .inner>.text {
     position: absolute;
     top: 10px;
-
 }
 
 .best-02 .inner .text a {}
@@ -538,12 +526,12 @@ strong {
 
 .best-02 .inner .product_wrap {
     width: 100%;
-    background-color: #FF0000;
-    /* 컨테이너 범위보다 큰 이유? */
     display: flex;
     justify-content: space-between;
     position: absolute;
     bottom: 16px;
+    left: 0; /* left 0을 준다음에 padding으로 조절 */
+    padding: 0 24px;
 
 }
 
@@ -558,7 +546,6 @@ strong {
     width: 100%;
     display: block;
     /* 인라인태그이므로 */
-
 }
 
 .best-02 .inner .product_wrap .image a img {
@@ -568,6 +555,7 @@ strong {
     display: block;
     /* a보다 img가 조금 더 튀어나와서 */
     border-radius: 12px;
+    opacity: 0.8;
 }
 
 .best-02 .inner .product_wrap .text {
@@ -598,14 +586,18 @@ strong {
     line-height: 14px;
     letter-spacing: -2.5%;
 }
+.new {
+    margin-bottom: 12px;
 
+}
 .new-02 {
     width: 100%;
-    position: relative;
+    margin-bottom: 32px;
 }
 
 .new-02 .inner {
     padding-bottom: 56.25%;
+    position: relative;
 }
 
 .new-02 iframe {
@@ -624,7 +616,16 @@ strong {
     width: 100%;
 }
 
-.new-02 .text a p {}
+.new-02 .text a p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -2.5%;
+    color: #747474;
+    text-align: center;
+    margin-bottom: 12px;
+}
 
 .agit {
     margin-bottom: 32px;
