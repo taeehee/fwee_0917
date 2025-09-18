@@ -2,6 +2,7 @@
 @import url(reset.css);
 @import url(../font/Reenie_Beanie/stylesheet.css);
 @import url(../font/Montserrat/stylesheet.css);
+@import url(../font/Pretendard/stylesheet.css);
 
 #wrap {
     max-width: 1024px;
@@ -11,16 +12,18 @@
 body {
     background-color: #fff;
     color: black;
+    font-family: 'Pretendard';
+
 }
 
 .header .inner,
 .header .nav,
 .main_visual .text,
-.swiper-wrapper,
+.mySwiper,
 .best .inner,
 .best-02 .inner,
 .new .inner,
-.new-02 .inner,
+/* .new-02 .inner, */
 .agit .inner .title,
 .agit .inner .text_wrap,
 .instagram,
@@ -30,20 +33,45 @@ body {
     margin: 0 auto;
 }
 
- h1 {
-    /* font-name: mon */
+h2 {
+    font-family: 'Montserrat';
     font-size: 24px;
     font-weight: bold;
     line-height: 36px;
     letter-spacing: 0;
 }
 
- .ALL {}
+strong {
+    font-family: 'Montserrat';
+    /* 왜 폰트가 똑같은지 않은지? */
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -2.5%;
+    color: white;
+}
 
- .ALL a {}
+.title_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
 
- .ALL p {
-    /* font-name: mo */
+.title_wrap h2 {
+    margin: 0 auto;
+    transform: translate(50%);
+}
+
+.all {}
+
+.all a {
+    display: flex;
+    align-items: center;
+}
+
+.all p {
+    font-family: 'Montserrat';
     font-size: 12px;
     font-weight: 500;
     /* medium */
@@ -52,66 +80,122 @@ body {
     color: #747474;
 }
 
- .ALL img {
+.all img {
     width: 14px;
     height: 12px;
     color: #747474;
+    
     /* 아이콘컬러 변경 코드? */
 }
 
- .text_wrap {
-    /* 프리텐다드 */
+.inner .list {
+    background-color: #FFC850;
+    /* 테스트 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
- .text_wrap .title {
+.inner .list .item {
+    width: 47.70%;
+}
+
+.inner .list .item .image {
+    position: relative;
+}
+
+.inner .list .item .image a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.inner .list .item .image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.inner .list .item .image .util {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.inner .list .item .image .util li {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(224, 224, 224, 0.3);
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    /* 배경흐림 */
+}
+
+.inner .list .item .image .util a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner .list .item .image .util li img {
+    width: 17px;
+    height: 17px;
+}
+
+.text_wrap {
+    margin-bottom: 20px;
+}
+
+.text_wrap .title {
     font-size: 14px;
     font-weight: 400;
-    /* 레귤러 */
     line-height: 22px;
     letter-spacing: -2.5%;
+    margin-bottom: 2px;
 }
 
- .text_wrap .price-01 {
+.text_wrap .price-01 {
     font-size: 12px;
     font-weight: 300;
-    /* 라이트 */
     line-height: 12px;
     letter-spacing: -2.5%;
-    /* 취소선 */
-    color: #747474
+    text-decoration: line-through;
+    color: #747474;
+    margin-bottom: 2px;
 }
 
- .text_wrap .price-02 p {
+.text_wrap .price-02 {
+    display: flex;
     font-size: 14px;
     font-weight: 600;
-    /* 세미볼드 */
     line-height: 22px;
     letter-spacing: -2.5%;
+    margin-bottom: 2px;
+    gap: 2px;
+}
+
+.text_wrap .price-02 p {
     color: #FF0000;
 }
 
- .text_wrap .price-02 p span {
-    font-size: 14px;
-    font-weight: 600;
-    /* 세미볼드 */
-    line-height: 22px;
-    letter-spacing: -2.5%;
-}
-
- .text_wrap .des {
+.text_wrap .des {
     font-size: 12px;
     font-weight: 400;
-    /* 레귤러 */
     line-height: 16px;
     letter-spacing: -2.5%;
     color: #747474;
     display: -webkit-box;
+    /* 말줄임표 */
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
 
 
+/* header */
 .header {}
 
 .header .textline {
@@ -121,7 +205,8 @@ body {
     color: #FFC850;
     font-family: 'Reenie Beanie';
     /* 공백없애면 폰트 적용안됨? */
-    white-space: nowrap; /* 글자 전체 다 보이게 강제한줄~ */
+    white-space: nowrap;
+    /* 글자 전체 다 보이게 강제한줄~ */
     overflow: hidden;
 }
 
@@ -183,7 +268,6 @@ body {
     /* 프리텐다드 */
     font-size: 16px;
     font-weight: 400;
-    /* 레귤러 */
     line-height: 24px;
     letter-spacing: -2.5%;
     color: #747474;
@@ -199,6 +283,7 @@ body {
 .header .nav li a {
     width: 100%;
 }
+
 
 /* main */
 .main_visual {
@@ -216,15 +301,17 @@ body {
 }
 
 .main_visual .image a img {
-    width: 100%; /* img 크기값에 정확한 값을 주면 해상도가 바뀌어도 이미지 크기가 고정됨. */
-    height: 532px; /* 이미지 비율유지하고 싶으면 h값 계산! */
+    width: 100%;
+    /* img 크기값에 정확한 값을 주면 해상도가 바뀌어도 이미지 크기가 고정됨. */
+    height: 532px;
+    /* 이미지 비율유지하고 싶으면 h값 계산! */
     object-fit: cover;
 }
 
 .main_visual .text {
     color: #fff;
     position: absolute;
-    bottom: 60px;
+    bottom: 20px;
     left: 24px;
     transform: translate(0, -50%);
 }
@@ -232,14 +319,9 @@ body {
 .main_visual .text a {}
 
 .main_visual .text a strong {
-    font-family: 'Montserrat';
-    /* 왜 폰트가 똑같은지 않은지? */
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: -2.5%;
-    margin-bottom: 6px;
-
+    margin-bottom: 4px;
+    display: block;
+    /* a태그이므로 */
 }
 
 .main_visual .text a p {
@@ -251,7 +333,7 @@ body {
 
 .main_visual .view {
     position: absolute;
-    bottom: 26px;
+    bottom: 6px;
     left: 24px;
     transform: translate(0, -50%);
     color: #fff;
@@ -282,32 +364,42 @@ body {
 .category {
     margin-bottom: 32px;
     margin-left: 24px;
+    overflow-x: auto;
+    /* auto:스크롤바/ hidden:숨김 */
+}
+
+.category::-webkit-scrollbar {
+    display: none;
 }
 
 .category .list {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .category .list .item {}
 
 .category .list .item .image {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     background-color: rgb(116, 116, 116, 0.1);
     border-radius: 50%;
-
 }
 
 .category .list .item .image a {
     width: 100%;
+    height: 100%;
     display: block;
+    /* 여백없애기 */
+    display: flex;
+    /* 이미지 정렬 */
+    align-items: center;
+    justify-content: center;
 }
 
-
 .category .list .item .image a img {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
@@ -317,93 +409,331 @@ body {
     line-height: 22px;
     letter-spacing: -2.5%;
     white-space: nowrap;
-    
-
+    text-align: center;
 }
 
 .category .list .item .text a p {}
 
-.swiper-wrapper {
-    margin-bottom: 32px;
-   
-}
+.swiper-wrapper {}
+
 .mySwiper {
- background-color: #FFBFFB;
+    height: 42px;
+    background-color: #FFBFFB;
+    border-radius: 6px;
+    display: flex;
+    margin-bottom: 32px;
 }
-/* 스와이퍼가 아니라 애니메이션 효과? */
 
 .swiper-wrapper .swiper-slide {
-    
-    line-height: 42px;
-    border-radius: 6px;
     padding: 10px;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: -2.5%;
 }
 
- .best {}
+.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    bottom: var(--swiper-pagination-bottom, 16px);
+}
+
+:root {
+    --swiper-theme-color: #B40B8B;
+}
+
+.best {
+    margin-bottom: 12px;
+}
 
 .best .inner {}
 
- .best .inner .title {
-    display: flex;
+.best .inner .title_wrap {}
+
+.best .inner .title_wrap h2 {}
+
+.best .inner .title_wrap .all {}
+
+.best .inner .title_wrap .all a {}
+
+.best .inner .title_wrap .all a p {}
+
+.best .inner .title_wrap .all a img {}
+
+.best .inner .list {}
+
+.best .inner .list .item {}
+
+.best .inner .list .item .image {}
+
+.best .inner .list .item .image a {}
+
+.best .inner .list .item .image a img {}
+
+.best .inner .list .item .image .util {}
+
+.best .inner .list .item .image .util li {}
+
+.best .inner .list .item .image .util li img {}
+
+.best .inner .list .item .text_wrap {}
+
+.best .inner .list .item .text_wrap .title {}
+
+.best .inner .list .item .text_wrap .price-01 {}
+
+.best .inner .list .item .text_wrap .price-02 {}
+
+.best .inner .list .item .text_wrap .price-02 p {}
+
+.best .inner .list .item .text_wrap .price-02 span {}
+
+.best .inner .list .item .text_wrap .des {}
+
+.best-02 {
+    height: 100%;
+    /* 모바일에서 화면가득한 단위는? */
+    position: relative;
+    margin-bottom: 32px;
 }
 
- .best .inner .title h1 {}
+.best-02 .video {}
 
- .best .inner .title .all {}
+.best-02 .video a {}
 
- .best .inner .title .all a {}
-
- .best .inner .title .all a p {}
-
- .best .inner .title .all a img {}
-
- .best .inner .list {
+.best-02 .video a video {
     width: 100%;
-    display: flex;
-}
-
- .best .inner .list .item {
-    width: 47.70%;
-}
-
- .best .inner .list .item .image {
-    width: 47.70%;
-}
-
- .best .inner .list .item .image a {
-    width: 100%;
-}
-
- .best .inner .list .item .image a img {
-    width: 156px;
-    height: 156px;
+    height: 141.86%;
     object-fit: cover;
 }
 
+.best-02 .inner {}
 
- .best .inner .list .item .image .util {
-    display: flex;
+.best-02 .inner>.text {
+    position: absolute;
+    top: 10px;
+
 }
 
- .best .inner .list .item .image .util li {}
+.best-02 .inner .text a {}
 
- .best .inner .list .item .image .util li img {}
+.best-02 .inner .text a strong {
+    margin-bottom: 4px;
+    display: block;
+    /* a태그이므로 */
+}
 
- .best .inner .list .item .text_wrap {}
+.best-02 .inner .text a p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -2.5%;
+    color: #fff;
+}
 
- .best .inner .list .item .text_wrap .title {}
+.best-02 .inner .product_wrap {
+    width: 100%;
+    background-color: #FF0000;
+    /* 컨테이너 범위보다 큰 이유? */
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 16px;
 
- .best .inner .list .item .text_wrap .price-01 {}
+}
 
- .best .inner .list .item .text_wrap .price-02 {}
+.best-02 .inner .product_wrap .image {
+    width: 22.4%;
+    height: 100%;
+    background-color: rgb(239, 239, 239, 0.8);
+    border-radius: 12px;
+}
 
- .best .inner .list .item .text_wrap .price-02 p {}
+.best-02 .inner .product_wrap .image a {
+    width: 100%;
+    display: block;
+    /* 인라인태그이므로 */
 
- .best .inner .list .item .text_wrap .price-02 span {}
+}
 
- .best .inner .list .item .text_wrap .des {}
+.best-02 .inner .product_wrap .image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* a보다 img가 조금 더 튀어나와서 */
+    border-radius: 12px;
+}
+
+.best-02 .inner .product_wrap .text {
+    width: 60.8%;
+    background-color: rgb(239, 239, 239, 0.8);
+    border-radius: 12px;
+    align-items: center;
+    padding: 8px 10px;
+}
+
+.best-02 .inner .product_wrap .text .title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -2.5%;
+}
+
+.best-02 .inner .product_wrap .text .price {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -2.5%;
+}
+
+.best-02 .inner .product_wrap .text .des {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -2.5%;
+}
+
+.new-02 {
+    width: 100%;
+    position: relative;
+}
+
+.new-02 .inner {
+    padding-bottom: 56.25%;
+}
+
+.new-02 iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+}
+
+.new-02 .text {}
+
+.new-02 .text a {
+    display: block;
+    width: 100%;
+}
+
+.new-02 .text a p {}
+
+.agit {
+    margin-bottom: 32px;
+}
+
+.agit .inner {}
+
+.agit .inner .title {}
+
+.agit .inner .title h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.agit .inner .title p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -2.5%;
+    margin-bottom: 12px;
+}
+
+.agit .inner .list {}
+
+.agit .inner .item {
+    width: 100%;
+}
+
+.agit .inner .item .image {}
+
+.agit .inner .item .image img {
+    width: 100%;
+    height: 532px;
+    object-fit: cover;
+}
+
+.agit .inner .item .text_wrap {}
+
+.agit .inner .item .text_wrap .title {}
+
+.agit .inner .item .text_wrap .title .address {}
+
+.agit .inner .item .text_wrap .title .address p {}
+
+.textline-02 {
+    width: 100%;
+    height: 36px;
+    font-family: 'Reenie Beanie';
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.textline-02 ul {
+    display: flex;
+    gap: 8px;
+}
+
+.textline-02 ul li {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0;
+}
+
+.instagram {}
+
+.instagram .inner {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.instagram .inner .title {}
+
+.instagram .inner .title h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram .inner .title p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -2.5%;
+    color: #747474;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.instagram .inner .image {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 14px;
+
+}
+
+.instagram .inner .image a {
+    width: 31%;
+
+}
+
+.instagram .inner .image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
