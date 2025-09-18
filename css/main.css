@@ -99,6 +99,7 @@ strong {
 
 .inner .list .item .image {
     position: relative;
+    margin-bottom: 8px;
 }
 
 .inner .list .item .image a {
@@ -696,7 +697,9 @@ strong {
     letter-spacing: 0;
 }
 
-.instagram {}
+.instagram {
+    margin-bottom: 32px;
+}
 
 .instagram .inner {
     width: 100%;
@@ -781,7 +784,6 @@ strong {
 .footer .inner .title_wrap .sns {
     display: flex;
     gap: 10px;
-
 }
 
 .footer .inner .title_wrap .sns li {}
@@ -815,9 +817,13 @@ strong {
 .footer .inner .info-02 {
     display: flex;
     margin-bottom: 6px;
+    gap:8px;
 }
 
 .footer .inner .info-02 li {}
+.footer .inner .info-02 li:nth-child(3) {
+    font-weight: bold;
+}
 
 .footer .inner .info-02 li a {}
 
