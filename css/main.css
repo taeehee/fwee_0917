@@ -42,7 +42,6 @@ h2 {
 
 strong {
     font-family: 'Montserrat';
-    /* 왜 폰트가 똑같은지 않은지? */
     font-size: 28px;
     font-weight: 700;
     line-height: 36px;
@@ -84,7 +83,6 @@ strong {
     height: 12px;
     color: #747474;
     filter: invert(50%) sepia(9%) saturate(17%) hue-rotate(344deg) brightness(88%) contrast(83%);
-    /* 아이콘컬러 변경 코드? */
 }
 
 .inner .list {
@@ -149,7 +147,7 @@ strong {
 
 .text_wrap .title {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 22px;
     letter-spacing: -2.5%;
     margin-bottom: 2px;
@@ -259,11 +257,10 @@ strong {
 .header .nav {
     display: flex;
     gap: 22px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .header .nav li {
-    /* 프리텐다드 */
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -287,7 +284,7 @@ strong {
 .main_visual {
     width: 100%;
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .main_visual .image {
@@ -301,8 +298,8 @@ strong {
 .main_visual .image a img {
     width: 100%;
     /* img 크기값에 정확한 값을 주면 해상도가 바뀌어도 이미지 크기가 고정됨. */
-    height: 532px;
-    /* 이미지 비율유지하고 싶으면 h값 계산! */
+    height: 469px;
+    /* 이미지 비율유지하고 싶으면 h값 계산 */
     object-fit: cover;
 }
 
@@ -680,7 +677,6 @@ strong {
     width: 100%;
     height: 36px;
     font-family: 'Reenie Beanie';
-    white-space: nowrap;
     overflow: hidden;
     margin-bottom: 32px;
 }
@@ -688,6 +684,7 @@ strong {
 .textline-02 ul {
     display: flex;
     gap: 8px;
+    animation: textslide 15s infinite linear;
 }
 
 .textline-02 ul li {
@@ -695,6 +692,17 @@ strong {
     font-weight: 400;
     line-height: 36px;
     letter-spacing: 0;
+    white-space: nowrap;
+}
+
+@keyframes textslide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .instagram {
@@ -731,12 +739,10 @@ strong {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 14px;
-
 }
 
 .instagram .inner .image a {
     width: 31%;
-
 }
 
 .instagram .inner .image a img {
@@ -755,11 +761,11 @@ strong {
 
 .footer .inner {
     color: rgb(255, 255, 255, 0.8);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 15px;
+    line-height: 18px;
     letter-spacing: -2.5%;
-    padding: 30px 0;
+    padding: 32px 0;
 }
 
 .footer .inner .title_wrap {
@@ -793,42 +799,86 @@ strong {
 .footer .inner .title_wrap .sns li a {}
 
 .footer .inner .title_wrap .sns li a img {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: px;
     filter: invert(100%) sepia(0%) saturate(7446%) hue-rotate(143deg) brightness(113%) contrast(106%);
     opacity: 0.8;
 }
 
-.footer .inner .customer {
+.footer .inner .text_wrap {
+    margin-bottom:0;
+}
+
+.footer .inner .text_wrap .customer {}
+
+.footer .inner .text_wrap .customer p {
+    font-weight: 700;
     margin-bottom: 6px;
 }
 
-.footer .inner .customer p {
-    font-weight: bold;
-}
+.footer .inner .text_wrap .info_wrap {}
 
-.footer .inner .customer span {}
-
-
-.footer .inner .info {
-    margin-bottom: 16px;
-}
-
-.footer .inner .info p {}
-
-.footer .inner .info-02 {
+.footer .inner .text_wrap .info_wrap .info-01 {
     display: flex;
-    margin-bottom: 6px;
-    gap:8px;
+    gap: 10px;
 }
 
-.footer .inner .info-02 li {}
-.footer .inner .info-02 li:nth-child(3) {
-    font-weight: bold;
+.footer .inner .text_wrap .info_wrap .info-01 p {}
+
+.footer .inner .text_wrap .info_wrap .info-02 {}
+
+.footer .inner .text_wrap .info_wrap .info-02 p {}
+
+.footer .inner .text_wrap .info_wrap .info-03 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
-.footer .inner .info-02 li a {}
+.footer .inner .text_wrap .info_wrap .info-03 p:nth-child(2) {
+    font-weight: 700;
+}
 
-.footer .inner .copyright {}
+.footer .inner .text_wrap .info_wrap-02 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
 
-.footer .inner .copyright p {}
+.footer .inner .text_wrap .info_wrap-02 li {}
+
+.footer .inner .text_wrap .info_wrap-02 li a {}
+
+.footer .info_wrap-02 .copyright {
+}
+
+.footer .info_wrap-02 .copyright p {}
+
+.footer .inner .top_btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.footer .inner .btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.8);
+    position: relative;
+    
+}
+
+.footer .inner .btn a {
+    width: 100%;
+}
+
+.footer .inner .btn a img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
