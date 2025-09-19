@@ -16,7 +16,6 @@ body {
 }
 
 .header .inner,
-.header .nav,
 .main_visual .text,
 .mySwiper,
 .best .inner,
@@ -262,7 +261,7 @@ strong {
 .header .nav {
     display: flex;
     gap: 22px;
-    margin-right: 22px; /* 끝에도 여백을주기위해 */
+    margin: 0 22px 32px 24px;
     margin-bottom: 12px;
     white-space: nowrap;
     overflow-x: auto;
@@ -361,6 +360,7 @@ strong {
 }
 
 .category {
+    width: 100%;
     margin: 0 24px 32px 24px;
     overflow-x: auto;
     /* auto:스크롤바/ hidden:숨김 */
