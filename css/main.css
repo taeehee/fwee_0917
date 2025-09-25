@@ -24,6 +24,7 @@ body {
 /* .new-02 .inner, */
 .agit .inner .title,
 .agit .inner .text_wrap,
+.section .inner .menu_tab,
 .instagram,
 .footer .inner {
     max-width: 100%;
@@ -693,6 +694,50 @@ strong {
 .agit .inner .item .text_wrap .title .address {}
 
 .agit .inner .item .text_wrap .title .address p {}
+
+
+/* 아지트 스크립트 버전 */
+.section {
+    width: 100%;
+}
+.section .inner {}
+.section .inner .menu_tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+    
+}
+.section .inner .menu_tab li {
+    border: 1px solid #747474;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+.section .inner .menu_tab li.active{
+    background-color: #B40B8B;
+    color: #fff;
+}
+.section .inner .list.active {
+    display: flex;
+}
+.section .inner .list {
+    display: flex;
+    display: none;
+}
+.section .inner .list .item {
+    width: 100%;
+    height: 469px;
+    margin-bottom: 16px;
+}
+.section .inner .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section .inner .list .item .text_wrap {}
+.section .inner .list .item .text_wrap .title {}
+.section .inner .list .item .text_wrap .address {}
+.section .inner .list .item .text_wrap .address p {}
 
 .textline-02 {
     width: 100%;
